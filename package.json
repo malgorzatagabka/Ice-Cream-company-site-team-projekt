@@ -6,7 +6,7 @@
   "homepage": "https://kabakmichal.github.io/team-projekt",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /parcel-project-template/"
+    "build": "parcel build src/*.html --public-url /team-projekt/"
   },
   "repository": {
     "type": "git",
