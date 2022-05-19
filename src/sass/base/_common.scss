@@ -1,7 +1,8 @@
 body {
     font-family: var(--body-font);
-    font-style: normal;
-    color: var(--font-color-main);
+    font-weight: 500;
+    font-size: 12px;
+    color: var(--font-subtext-main);
     margin: 0 auto;
 }
 
@@ -29,4 +30,9 @@ p {
  
  .link{
      text-decoration: none;
+ }
+ 
+ .blank{
+     display: none;
+     /*STYL DO USUWANIA NIEPOTRZEBNYCH RZECZY Z POLA WIDZENIA, POLECAM ZAMIAST DOPISYWANIA DISPLAY:NONE DO SWOICH STYLI*/
  }
