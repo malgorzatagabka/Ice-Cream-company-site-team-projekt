@@ -1,0 +1,363 @@
+.products__natural,
+.products__tittle,
+.item-name {
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.products__all {
+  list-style: none;
+}
+.products {
+  &__natural {
+    font-family: var(--header-font);
+    color: var(--font-header);
+  }
+  &__tittle {
+    font-family: var(--header-font);
+    color: var(--font-color-secondary);
+  }
+}
+.item {
+  &-name {
+    font-family: var(--header-font);
+    letter-spacing: 0.04em;
+    color: var(--font-color-main);
+  }
+  &-description {
+    text-align: center;
+    letter-spacing: 0.04em;
+    font-family: var(--body-font);
+    color: var(--font-color-main);
+  }
+}
+// -----------------mobil----------------------
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .products {
+    padding-top: 121px;
+    padding-bottom: 98px;
+
+    &__name {
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+
+      //   max-width: 174px;
+      //   height: auto;
+    }
+
+    &__natural {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 1.666;
+      text-align: center;
+      padding-bottom: 15px;
+    }
+    &__tittle {
+      font-weight: 400;
+      font-size: 34px;
+      line-height: 1.147;
+      letter-spacing: 0.04em;
+      padding-bottom: 31px;
+    }
+    &__item {
+      background: var(--header-background-color);
+      border-radius: 24px;
+      width: 100%;
+    }
+    &__item:not(:last-child) {
+      margin-bottom: 17px;
+    }
+  }
+
+  .item {
+    &-name {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 1.15;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    &-description {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 152%;
+      text-align: center;
+      padding-bottom: 30px;
+      padding-left: 41px;
+      padding-right: 39px;
+      width: 100%;
+      padding-top: 30px;
+    }
+  }
+  .products__all {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .products__item:not(:first-child) {
+    flex-basis: calc(100% / 3);
+  }
+
+  .button-arrow {
+    background-color: var(--header-background-color);
+    border: none;
+    padding: 0;
+    padding-bottom: 41px;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+  .arrow-color2 {
+    background-color: var(--product2-color);
+  }
+  .arrow-color3 {
+    background-color: var(--product3-color);
+  }
+
+  .products__item::before {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 249px;
+    height: 252px;
+
+    margin-bottom: 30px;
+  }
+  .image-1::before {
+    background-image: url('/images/IceCream-mobile/product1.png');
+  }
+
+  .image-2::before {
+    background-image: url('/images/IceCream-mobile/product2.png');
+  }
+  .image-3::before {
+    background-image: url('/images/IceCream-mobile/product3.png');
+  }
+
+  .item-description::before {
+    content: '\&hellip;';
+    display: block;
+    padding-bottom: 30px;
+  }
+}
+
+// ----------tablet------------
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .products {
+    padding-top: 122px;
+    padding-bottom: 112px;
+
+    &__name {
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    &__natural {
+      font-weight: 400;
+      font-size: 26px;
+      line-height: 1.153;
+      text-align: center;
+      padding-bottom: 15px;
+    }
+    &__tittle {
+      font-weight: 400;
+      font-size: 48px;
+      line-height: 1.145;
+      letter-spacing: 0.04em;
+      padding-bottom: 39px;
+    }
+    &__item {
+      background: var(--header-background-color);
+      border-radius: 24px;
+      width: 100%;
+    }
+    &__item:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+  .item {
+    &-name {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 1.15;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    &-description {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 152%;
+      text-align: center;
+      padding-bottom: 40px;
+      padding-left: 11px;
+      padding-right: 11px;
+      width: 100%;
+      padding-top: 30px;
+    }
+  }
+  .products__all {
+    justify-content: center;
+    display: flex;
+  }
+
+  //   .products__item:not(:first-child) {
+  //     flex-basis: calc(100% / 3);
+  //   }
+
+  .button-arrow {
+    background-color: var(--header-background-color);
+    border: none;
+    padding: 0;
+    padding-bottom: 40px;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+  .arrow-color2 {
+    background-color: var(--product2-color);
+  }
+  .arrow-color3 {
+    background-color: var(--product3-color);
+  }
+
+  .products__item::before {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 220px;
+    height: 226px;
+    margin-bottom: 30px;
+  }
+  .image-1::before {
+    background-image: url('/images/IceCream-tab/product1-tab.png');
+  }
+
+  .image-2::before {
+    background-image: url('/images/IceCream-tab/product2-tab.png');
+  }
+  .image-3::before {
+    background-image: url('/images/IceCream-tab/product3-tab.png');
+  }
+
+  .item-description::before {
+    content: '\&hellip;';
+    display: block;
+    padding-bottom: 30px;
+  }
+}
+
+// -----------PC------------
+
+@media screen and (min-width: 1200px) {
+  .products {
+    padding-top: 127px;
+    padding-bottom: 119px;
+
+    &__name {
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    &__natural {
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 1.145;
+      text-align: center;
+      padding-bottom: 15px;
+    }
+    &__tittle {
+      font-weight: 400;
+      font-size: 58px;
+      line-height: 1.137;
+      letter-spacing: 0.06em;
+      padding-bottom: 49px;
+    }
+    &__item {
+      background: var(--header-background-color);
+      border-radius: 24px;
+      width: 100%;
+    }
+    &__item:not(:last-child) {
+      margin-right: 27px;
+    }
+  }
+  .item {
+    &-name {
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 1.145;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    &-description {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 176%;
+      text-align: center;
+      padding-bottom: 62px;
+      padding-left: 40px;
+      padding-right: 40px;
+      width: 100%;
+      letter-spacing: 0.04em;
+      padding-top: 32px;
+    }
+  }
+  .products__all {
+    justify-content: center;
+    display: flex;
+    flex-basis: 100%;
+  }
+
+  //   .products__item:not(:first-child) {
+  //     flex-basis: calc(100% / 3);
+  //   }
+
+  .button-arrow {
+    background-color: var(--header-background-color);
+    border: none;
+    padding: 0;
+    padding-bottom: 50px;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+  .arrow-color2 {
+    background-color: var(--product2-color);
+  }
+  .arrow-color3 {
+    background-color: var(--product3-color);
+  }
+
+  .products__item::before {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 220px;
+    height: 226px;
+    margin-bottom: 30px;
+  }
+  .image-1::before {
+    background-image: url('/images/IceCream-tab/product1-tab.png');
+  }
+
+  .image-2::before {
+    background-image: url('/images/IceCream-tab/product2-tab.png');
+  }
+  .image-3::before {
+    background-image: url('/images/IceCream-tab/product3-tab.png');
+  }
+
+  .item-description::before {
+    content: '\&hellip;';
+    display: block;
+    padding-bottom: 30px;
+  }
+}
