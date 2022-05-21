@@ -1,0 +1,554 @@
+@media screen and (min-width:320px) and (max-width:767px) {
+    .contacts__header{
+        display:none;
+    }
+    
+    .contacts-section{
+        background-color: var(--background-color);
+        padding-bottom:113px;
+    }
+    
+    .contacts,
+    .card__list,
+    .contacts__information {
+        list-style: none;
+        padding:0;
+    }
+
+    .contacts{
+        display: flex;
+        flex-wrap: wrap;
+        margin:0;
+    }
+
+    .contacts__item{
+        width: 100%;
+        height: auto;
+        background-color:var(--btn-color-secondary);
+        box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+        border-radius: 24px;
+        padding:43px 21px 43px 20px;
+        flex-basis: calc(100% / 1 - 20px);
+        position: relative;
+        bottom:84px;
+        &:not(:first-child){
+            margin-top: 20px;
+        }
+        
+    }
+
+    .card__list-item--brown,
+    .card__list-item--green{
+        width: 80px;
+        height: 16px;
+        border-radius: 4px;
+        font-family:var(--body-font);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 186%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        letter-spacing: 0.04em;
+        color: var(--font-color-main);
+    }
+
+    .card__list-item--brown{
+        background-color: var(--product2-color);
+    }
+
+    .card__list-item--green{
+        background-color: var(--product3-color);
+    }
+
+    .card__list-place{
+        font-family: var(--body-font);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 186%;
+        letter-spacing: 0.04em;
+        color: var(--font-subtext-main);
+        padding-top:25px;
+        padding-bottom:10px;
+    }
+
+    .card__list-place-description{
+        font-family: var(--body-font);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        color: var(--font-subtext-secondary);
+        padding-bottom:25px;
+        flex-wrap: wrap;
+        border-bottom:1px solid var(--customer-quote-color);
+    }
+
+    .card__list-weekday,
+    .card__list-weekend{
+        font-family: var(--body-font);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 186%;
+        color: var(--font-subtext-main);
+        display: flex;
+    }
+
+    .card__list-weekday{
+        padding-top:25px;
+    }
+
+    .card__list-weekday-hours,
+    .card__list-weekend-hours{
+        font-family: var(--body-font);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 186%;
+        color: var(--font-header);
+    }
+
+    .card__list-weekend-hours{
+        border-bottom:1px solid var(--customer-quote-color);
+        padding-bottom:25px;
+    }
+
+    .card__list-phonelink,
+    .card__list-maillink{
+        font-family: var(--body-font);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        color: var(--font-subtext-secondary);
+        text-decoration: none;
+    }
+
+    .card__list-phone{
+        padding-top:25px;
+    }
+
+    .contacts__information{
+        margin:0;
+    }
+
+    .information__item-dark{
+        width: 161.45px;
+        height: 44px;
+        background-color: var(--btn-media-hover);
+        border-radius: 22px;
+        font-family: var(--body-font);
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 21px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        color: var(--font-color-main);
+        margin-bottom:10px;
+        margin-left:auto;
+        margin-right:auto;
+        cursor: pointer;
+        border:none;
+    }
+
+    .information__item-light{
+        width: 161.45px;
+        height: 44px;
+        background-color:var(--btn-color-secondary);
+        border-radius: 22px;
+        font-family: var(--body-font);
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 21px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        color: var(--font-color-secondary);
+        margin-top:10px;
+        margin-bottom:10px;
+        margin-left:auto;
+        margin-right:auto;
+        cursor: pointer;
+        border:none;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1199px){
+    .contacts__header{
+        display:none;
+    }
+    
+    .contacts-section{
+        background-color: var(--background-color);
+        padding-bottom:113px;
+    }
+    
+    .contacts,
+    .card__list,
+    .contacts__information {
+        list-style: none;
+        padding:0;
+    }
+
+    .contacts{
+        display: flex;
+        flex-wrap: wrap;
+        margin:0;
+    }
+
+    .contacts__item{
+        width: 100%;
+        height: auto;
+        background-color:var(--btn-color-secondary);
+        box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+        border-radius: 24px;
+        padding:50px 44px 50px 31px;
+        position: relative;
+        bottom:78px;
+        flex-basis: calc(100% / 3 - 20px);
+        &:not(:first-child){
+            margin-left: 20px;
+        }
+    }
+
+    .card__list-item--brown,
+    .card__list-item--green{
+        width: 80px;
+        height: 16px;
+        border-radius: 4px;
+        font-family: var(--body-font);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 186%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        letter-spacing: 0.04em;
+        color: var(--font-color-main);
+    }
+
+    .card__list-item--brown{
+        background-color: var(--product2-color);
+    }
+
+    .card__list-item--green{
+        background-color: var(--product3-color);
+    }
+
+
+    .card__list-place{
+        font-family:var(--body-font);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 186%;
+        letter-spacing: 0.04em;
+        color: var(--font-subtext-main);
+        padding-top:25px;
+        padding-bottom:10px;
+    }
+
+    .card__list-place-description{
+        font-family: var(--body-font);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        color:var(--font-subtext-secondary);
+        padding-bottom:25px;
+        flex-wrap: wrap;
+        border-bottom:1px solid var(--customer-quote-color);
+    }
+
+    .card__list-weekday,
+    .card__list-weekend{
+        font-family: var(--body-font);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 186%;
+        color:var(--font-subtext-main);
+        display: flex;
+        
+    }
+
+    .card__list-weekday{
+        padding-top:25px;
+    }
+
+    .card__list-weekday-hours,
+    .card__list-weekend-hours{
+        font-family: var(--body-font);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 186%;
+        color: var(--font-header);
+    }
+
+    .card__list-weekend-hours{
+        border-bottom:1px solid var(--customer-quote-color);
+        padding-bottom:25px;
+    }
+
+    .card__list-phonelink,
+    .card__list-maillink{
+        font-family: var(--body-font);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        color: var(--font-subtext-secondary);
+        text-decoration: none;
+    }
+
+    .card__list-phone{
+        padding-top:25px;
+    }
+
+    .contacts__information{
+        display: flex;
+        margin:0;
+        position: relative;
+        top:3px;
+    }
+
+    .information__item-dark{
+        width: 161.45px;
+        height: 44px;
+        background-color: var(--btn-color);
+        border-radius: 22px;
+        font-family: var(--body-font);
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 21px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        color: var(--font-color-main);
+        margin-right:14.5px;
+        margin-left:auto;
+        cursor: pointer;
+        border:none;
+    }
+
+    .information__item-light{
+        width: 161px;
+        height: 44px;
+        background-color: var(--btn-color-secondary);
+        border-radius: 22px;
+        font-family: var(--body-font);
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 21px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        color: var(--font-color-secondary);
+        margin-right:auto;
+        cursor: pointer;
+        border:none;
+    }
+}
+
+@media screen and (min-width:1200px){
+    .contacts__header{
+        display:none;
+    }
+    
+    .contacts-section{
+        background-color: var(--background-color);
+        padding-bottom:113px;
+        padding-left:115px;
+        padding-right:95px;
+    }
+    
+    .contacts,
+    .card__list,
+    .contacts__information {
+        list-style: none;
+        padding:0;
+    }
+
+    .contacts{
+        display: flex;
+        flex-wrap: wrap;
+        margin:0;
+    }
+
+    .contacts__item{
+        width: 100%;
+        height: auto;
+        background-color: var(--btn-color-secondary);
+        box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+        border-radius: 24px;
+        margin:0;
+        padding:50px 44px 50px 31px;
+        position:relative;
+        bottom:102px;
+        flex-basis: calc(100% / 3 - 20px);
+        &:not(:first-child){
+            margin-left: 20px;
+        }
+    }
+
+    .card__list-item--brown,
+    .card__list-item--green{
+        width: 80px;
+        height: 16px;
+        border-radius: 4px;
+        font-family: var(--body-font);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 186%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        letter-spacing: 0.04em;
+        color: var(--font-color-main);
+    }
+
+    .card__list-item--brown{
+        background-color: var(--product2-color);
+    }
+
+    .card__list-item--green{
+        background-color: var(--product3-color);
+    }
+
+
+    .card__list-place{
+        font-family: var(--body-font);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 186%;
+        letter-spacing: 0.04em;
+        color: var(--font-subtext-main);
+        padding-top:25px;
+        padding-bottom:10px;
+    }
+
+    .card__list-place-description{
+        font-family: var(--body-font);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        color: var(--font-subtext-secondary);
+        padding-bottom:25px;
+        flex-wrap: wrap;
+        border-bottom:1px solid var(--customer-quote-color);
+    }
+
+    .card__list-weekday,
+    .card__list-weekend{
+        font-family: var(--body-font);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 186%;
+        color: var(--font-subtext-main);
+        display: flex;
+        
+    }
+
+    .card__list-weekday{
+        padding-top:25px;
+    }
+
+    .card__list-weekday-hours,
+    .card__list-weekend-hours{
+        font-family: var(--body-font);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 186%;
+        color: var(--font-header);
+    }
+
+    .card__list-weekend-hours{
+        border-bottom:1px solid var(--customer-quote-color);
+        padding-bottom:25px;
+    }
+
+    .card__list-phonelink,
+    .card__list-maillink{
+        font-family: var(--body-font);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        color: var(--font-subtext-secondary);
+        text-decoration: none;
+    }
+
+    .card__list-phone{
+        padding-top:25px;
+    }
+
+    .contacts__information{
+        display: flex;
+        margin-top:0;
+        position:relative;
+        bottom:16px;
+    }
+
+    .information__item-dark{
+        width: 161.45px;
+        height: 44px;
+        background-color: var(--btn-color);
+        border-radius: 22px;
+        font-family: var(--body-font);
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 21px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        color: var(--font-color-main);
+        margin-right:14.5px;
+        margin-left:auto;
+        cursor: pointer;
+        border:none;
+    }
+
+    .information__item-light{
+        width: 161px;
+        height: 44px;
+        background-color: var(--btn-color-secondary);
+        border-radius: 22px;
+        font-family: var(--body-font);
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 21px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        color: var(--font-color-secondary);
+        margin-right:auto;
+        cursor: pointer;
+        border:none;
+    }
+}
