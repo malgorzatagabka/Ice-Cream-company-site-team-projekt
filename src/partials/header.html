@@ -1,4 +1,4 @@
-<div class="hero container">
+<div class="container hero">
   <div class="hero__header">
     <picture>
       <source
@@ -9,9 +9,62 @@
       <img src="./images/icecream-mobile/logo.png" alt="logo" />
     </picture>
 
-    <div class="icon-menu"></div>
-
+    <svg class="icon-menu" width="20" height="12" data-menu-open>
+      <use href="./images/icons.svg#icon-menu"></use>
+    </svg>
   </div>
 
-  <div class="hero__passion"></div>
+  <div class="hero__passion">
+    <div class="title">
+      <p class="title__white">
+        ice cream<br />
+        made with
+      </p>
+
+      <p class="title__pink">passion</p>
+    </div>
+
+    <div class="hero__buttons">
+      <button type="submit" class="hero-btn hero-btn__products">Products</button>
+
+      <button type="submit" class="hero-btn hero-btn__how">How it's made?</button>
+    </div>
+  </div>
 </div>
+
+<div class="backdrop is-hidden" data-menu>
+  <div class="modal-menu">
+    <button type="button" class="modal-menu__close-btn" data-menu-close>
+      <svg class="close-btn__icon" width="13.48" height="14">
+        <use href="./images/icons.svg#icon-close"></use>
+      </svg>
+    </button>
+
+    <button type="button" class="modal-menu__buy">
+      Buy now
+      <svg class="buy-icon" width="5.26" height="8">
+        <use href="./images/arrow.svg#icon-arrow_menu"></use>
+      </svg>
+    </button>
+
+    <ul class="list menu-list">
+      <li class="menu-list__item">
+        Home
+      </li>
+      <li class="menu-list__item">
+        About us
+      </li>
+      <li class="menu-list__item">
+        How it's made?
+      </li>
+      <li class="menu-list__item">
+        Our products
+      </li>
+      <li class="menu-list__item">
+        Contact
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script src="./js/menu-modal.js"></script>
