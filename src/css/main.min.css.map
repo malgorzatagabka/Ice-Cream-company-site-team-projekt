@@ -12,7 +12,9 @@
         "../sass/layout/_customers.scss",
         "../sass/layout/_contacts.scss",
         "../sass/layout/_backdrop.scss",
+        "../sass/layout/_backdrop-location.scss",
         "../sass/layout/_modal.scss",
+        "../sass/layout/_modal-location.scss",
         "../sass/layout/_footer.scss",
         "../sass/utils/_products.scss",
         "../sass/layout/_modal-about.scss"

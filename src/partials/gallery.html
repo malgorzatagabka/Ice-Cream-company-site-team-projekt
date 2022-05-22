@@ -1,1 +1,28 @@
-<section>heheh</section>
+<section class="gallery">
+  <div class="gallery__background">
+    <picture class="gallery__picture container">
+      <source
+        class="gallery__source"
+        media="(max-width: 767px)"
+        srcset="./images/icecream-mobile/gallery.png 1x, ./images/icecream-mobile/gallery@2x.png 2x"
+      />
+      <source
+        class="gallery__source"
+        media="(max-width: 1279px)"
+        srcset="
+          ./images/icecream-tab/gallery-tab.png    1x,
+          ./images/icecream-tab/gallery-tab@2x.png 2x
+        "
+      />
+      <source
+        class="gallery__source"
+        media="(min-width: 1280px)"
+        srcset="
+          ./images/icecream-desktop/gallery-desktop.png    1x,
+          ./images/icecream-desktop/gallery-desktop@2x.png 2x
+        "
+      />
+      <img class="gallery__img" alt="gallery" src="./images/icecream-mobile/gallery.png" />
+    </picture>
+  </div>
+</section>
