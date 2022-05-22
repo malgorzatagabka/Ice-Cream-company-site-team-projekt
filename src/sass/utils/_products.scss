@@ -235,7 +235,7 @@
     margin-bottom: 30px;
   }
   .image-1::before {
-    background-image: url('/images/IceCream-tab/product1-tab.png');
+    background-image: url('/images/IceCream-tab/product1-tab.png');  
   }
 
   .image-2::before {
@@ -246,7 +246,7 @@
   }
 
   .item-description::before {
-    content: '\&hellip;';
+    content: '&aactsqdot';
     display: block;
     padding-bottom: 30px;
   }

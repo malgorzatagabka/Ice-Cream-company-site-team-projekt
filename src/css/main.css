@@ -123,11 +123,6 @@ img {
   }
 }
 
-li {
-  font-size: 40px;
-  letter-spacing: 5em;
-}
-
 .products__natural,
 .products__tittle,
 .item-name {
@@ -360,7 +355,7 @@ li {
     background-image: url("/images/IceCream-tab/product3-tab.png");
   }
   .item-description::before {
-    content: '\&hellip;';
+    content: '&aactsqdot';
     display: block;
     padding-bottom: 30px;
   }
