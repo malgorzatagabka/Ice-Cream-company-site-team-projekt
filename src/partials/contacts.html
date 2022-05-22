@@ -56,8 +56,55 @@
         </ul>
     
         <ul class="contacts__information">
-            <button type="button" class="information__item-dark">Our Locations ></button>
-            <button type="button" class="information__item-light">Franchise ></button>
+            <button type="button" class="information__item-dark" data-modal-open>Our Locations ></button>
+            <button type="button" class="information__item-light" data-modal-open-second>Franchise ></button>
         </ul>
     </div>   
 </section>
+
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+        <button type="button" class="close-btn" data-modal-close>X
+        </button>
+    </div>
+
+    <div class="modal-second">
+        <button type="button" class="close-btn" data-modal-close-second>X
+        </button>
+    </div>
+</div>
+<script>
+    (() => {
+    const refs = {
+      openModalBtn: document.querySelector('[data-modal-open]'),
+      closeModalBtn: document.querySelector('[data-modal-close]'),
+      modal: document.querySelector('[data-modal]'),
+    };
+  
+    refs.openModalBtn.addEventListener('click', toggleModal);
+    refs.closeModalBtn.addEventListener('click', toggleModal);
+  
+    function toggleModal() {
+      refs.modal.classList.toggle('is-hidden');
+    }
+  })();
+</script>
+
+<script>
+    (() => {
+    const refs = {
+      openModalBtn: document.querySelector('[data-modal-open-second]'),
+      closeModalBtn: document.querySelector('[data-modal-close-second]'),
+      modal: document.querySelector('[data-modal]'),
+    };
+  
+    refs.openModalBtn.addEventListener('click', toggleModal);
+    refs.closeModalBtn.addEventListener('click', toggleModal);
+  
+    function toggleModal() {
+      refs.modal.classList.toggle('is-hidden');
+    }
+  })();
+</script>
+
+  

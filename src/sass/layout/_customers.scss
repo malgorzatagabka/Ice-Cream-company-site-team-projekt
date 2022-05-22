@@ -21,8 +21,7 @@
       background-color: var(--customer-background-color);
       padding: 43px 66px 26px 57px;
       display: block;
-      margin-left: 20px;
-      margin-right: 20px;
+      margin:0;
     }
   }
 
@@ -40,6 +39,9 @@
   .ellipse {
     list-style: none;
     justify-content: center;
+    text-align: center;
+    margin-top:30px;
+    margin-bottom:18px;
   }
 
   .author {
@@ -66,6 +68,7 @@
   .slideshow-container {
     max-width: 100%;
     position: relative;
+    margin-bottom:29px;
   }
 
   /* Next & previous buttons */
@@ -98,6 +101,11 @@
   }
 
   /* The dots/bullets/indicators */
+  .dots{
+    text-align: center;
+    margin-top:30px;
+  }
+  
   .dot {
     cursor: pointer;
     height: 12px;
@@ -161,9 +169,7 @@
       height: 164px;
       background-color: var(--customer-background-color);
       padding: 47px 80px 34px 60px;
-      margin-left: 74px;
-      margin-right: 74px;
-      margin-bottom: 24px;
+      margin:0;
     }
   }
 
@@ -173,6 +179,7 @@
     justify-content: center;
     padding: 0;
     margin-top: 0;
+    margin-top:24px;
     margin-bottom: 14px;
     &__item {
       &:not(:last-child) {
@@ -206,6 +213,7 @@
   .slideshow-container {
     max-width: 100%;
     position: relative;
+    margin-bottom:19px;
   }
 
   /* Next & previous buttons */
@@ -238,6 +246,10 @@
   }
 
   /* The dots/bullets/indicators */
+  .dots{
+    text-align: center;
+  }
+  
   .dot {
     cursor: pointer;
     height: 12px;
@@ -278,17 +290,16 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .customer-section {
-    padding-left: 115px;
-    padding-right: 115px;
-  }
+  // .customer-section {
+
+  // }
 
   .opinion__card {
     width: 100%;
     height: 138px;
     background-color: var(--customer-background-color);
     padding: 47px 80px 34px 60px;
-    margin-bottom: 24px;
+    margin:0;
   }
 
   .opinion {
@@ -315,8 +326,8 @@
     display: flex;
     justify-content: center;
     padding: 0;
-    margin-top: 0;
-    margin-bottom: 14px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     &__item {
       &:not(:last-child) {
         margin-right: 10px;
@@ -349,6 +360,7 @@
   .slideshow-container {
     max-width: 100%;
     position: relative;
+    margin-bottom:15px;
   }
 
   /* Next & previous buttons */
@@ -381,6 +393,10 @@
   }
 
   /* The dots/bullets/indicators */
+  .dots{
+    text-align: center;
+  }
+  
   .dot {
     cursor: pointer;
     height: 12px;
