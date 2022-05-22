@@ -19,6 +19,7 @@
         display: flex;
         flex-wrap: wrap;
         margin:0;
+        margin-right:-10px;
     }
 
     .contacts__item{
@@ -28,7 +29,8 @@
         box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
         border-radius: 24px;
         padding:43px 21px 43px 20px;
-        flex-basis: calc(100% / 1 - 20px);
+        flex-basis: calc(100% / 1 - 10px);
+        margin-right:10px;
         position: relative;
         bottom:84px;
         &:not(:first-child){
@@ -203,6 +205,7 @@
         display: flex;
         flex-wrap: wrap;
         margin:0;
+        margin-right:-20px;
     }
 
     .contacts__item{
@@ -374,8 +377,8 @@
     .contacts-section{
         background-color: var(--background-color);
         padding-bottom:113px;
-        padding-left:115px;
-        padding-right:95px;
+        // padding-left:115px;
+        // padding-right:95px;
     }
     
     .contacts,
