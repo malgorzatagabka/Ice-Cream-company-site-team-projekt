@@ -1,0 +1,110 @@
+<section class="contacts-section">
+    <div class="container">
+        <h1 class="contacts__header">Contacts</h1>
+        <ul class="contacts">
+            <li class="contacts__item">
+                <ul class="card__list">
+                    <li class="card__list-item--brown">CAFE</li>
+                    <li class="card__list-place">Chicago</li>
+                    <li class="card__list-place-description">Fusce ut velit laoreet, tempus arcu molestie vulputate</li>
+                    <li class="card__list-weekday">Monday-Friday</li>
+                    <li class="card__list-weekday-hours">06:00 AM - 10:00 PM</li>
+                    <li class="card__list-weekend">Saturday-Sunday</li>
+                    <li class="card__list-weekend-hours">08:00 AM - 16:00 PM</li>
+                    <li class="card__list-phone">
+                        <a class="card__list-phonelink" href="tel:+61(0) 383 766 284">+61(0) 383 766 284</a>
+                    </li>
+                    <li class="card__list-mail">
+                        <a class="card__list-maillink" href="mailto:noreply@envato.com">noreply@envato.com</a>  
+                    </li>
+                </ul>
+            </li>
+             <li class="contacts__item">
+                <ul class="card__list">
+                    <li class="card__list-item--green">FOODTRUCK</li>
+                    <li class="card__list-place">Los Angeles</li>
+                    <li class="card__list-place-description">Fusce ut velit laoreet, tempus arcu molestie vulputate</li>
+                    <li class="card__list-weekday">Monday-Friday</li>
+                    <li class="card__list-weekday-hours">06:00 AM - 10:00 PM</li>
+                    <li class="card__list-weekend">Saturday-Sunday</li>
+                    <li class="card__list-weekend-hours">08:00 AM - 16:00 PM</li>
+                    <li class="card__list-phone">
+                        <a class="card__list-phonelink" href="tel:+61(0) 383 766 284">+61(0) 383 766 284</a>
+                    </li>
+                    <li class="card__list-mail">
+                        <a class="card__list-phonelink" href="mailto:noreply@envato.com">noreply@envato.com</a>  
+                    </li>  
+                </ul>
+            </li>            
+            <li class="contacts__item">
+                <ul class="card__list">
+                    <li class="card__list-item--brown">CAFE</li>
+                    <li class="card__list-place">New York</li>
+                    <li class="card__list-place-description">Fusce ut velit laoreet, tempus arcu molestie vulputate</li>
+                    <li class="card__list-weekday">Monday-Friday</li>
+                    <li class="card__list-weekday-hours">06:00 AM - 10:00 PM</li>
+                    <li class="card__list-weekend">Saturday-Sunday</li>
+                    <li class="card__list-weekend-hours">08:00 AM - 16:00 PM</li>
+                    <li class="card__list-phone">
+                        <a class="card__list-phonelink" href="tel:+61(0) 383 766 284">+61(0) 383 766 284</a>
+                    </li>
+                    <li class="card__list-mail">
+                        <a class="card__list-phonelink" href="mailto:noreply@envato.com">noreply@envato.com</a>  
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    
+        <ul class="contacts__information">
+            <button type="button" class="information__item-dark" data-modal-open>Our Locations ></button>
+            <button type="button" class="information__item-light" data-modal-open-second>Franchise ></button>
+        </ul>
+    </div>   
+</section>
+
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+        <button type="button" class="close-btn" data-modal-close>X
+        </button>
+    </div>
+
+    <div class="modal-second">
+        <button type="button" class="close-btn" data-modal-close-second>X
+        </button>
+    </div>
+</div>
+<script>
+    (() => {
+    const refs = {
+      openModalBtn: document.querySelector('[data-modal-open]'),
+      closeModalBtn: document.querySelector('[data-modal-close]'),
+      modal: document.querySelector('[data-modal]'),
+    };
+  
+    refs.openModalBtn.addEventListener('click', toggleModal);
+    refs.closeModalBtn.addEventListener('click', toggleModal);
+  
+    function toggleModal() {
+      refs.modal.classList.toggle('is-hidden');
+    }
+  })();
+</script>
+
+<script>
+    (() => {
+    const refs = {
+      openModalBtn: document.querySelector('[data-modal-open-second]'),
+      closeModalBtn: document.querySelector('[data-modal-close-second]'),
+      modal: document.querySelector('[data-modal]'),
+    };
+  
+    refs.openModalBtn.addEventListener('click', toggleModal);
+    refs.closeModalBtn.addEventListener('click', toggleModal);
+  
+    function toggleModal() {
+      refs.modal.classList.toggle('is-hidden');
+    }
+  })();
+</script>
+
+  
