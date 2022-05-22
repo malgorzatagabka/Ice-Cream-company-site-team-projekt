@@ -1,83 +1,100 @@
 <section class="customer-section">
-    <div class="container">
-        <div class="slideshow-container">
-    
-            <div class="mySlides fade">
-              <img src="../images/icecream-mobile/customer1.png" 
-              srcset="../images/icecream-mobile/customer1.png 1x, ../images/icecream-mobile/customer1@2x.png 2x"
-              alt="woman with curly hair" 
-              width="85" 
-              height="85">
-            </div>
-            
-            <div class="mySlides fade">
-              <img src="../images/icecream-mobile/customer2.png" 
-              srcset="../images/icecream-mobile/customer2.png 1x, ./images/icecream-mobile/customer2@2x.png 2x"
-              alt="woman in glassess" 
-              width="85" 
-              height="85">
-            </div>
-            
-            <div class="mySlides fade">
-              <img src="../images/icecream-mobile/customer3.png" 
-              srcset="../images/icecream-mobile/customer3.png 1x, ../images/icecream-mobile/customer3@2x.png 2x"
-              alt="woman in yellow blouse" 
-              width="85" 
-              height="85">
-            </div>
-            
-            <a class="prev" onclick="plusSlides(-1)">❮</a>
-            <a class="next" onclick="plusSlides(1)">❯</a>
-            
-        </div>
-        <div>
-            
-        </div>
-        <figure class="opinion__card">
-            <p class="opinion">Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel risus.</p>
-        </figure>
-        <ul class="ellipse">
-            <li class="ellipse__item">
-                <svg class="ellipse__item--icon" width="32" height="4">
-                    <use href="images/icons.svg#icon-dotted"></use>
-                </svg>
-            </li>
-            
-        </ul>
-        <p class="author">Emily, Los Angeles</p>
-            <div class="dots">
-                <span class="dot" onclick="currentSlide(1)"></span> 
-                <span class="dot" onclick="currentSlide(2)"></span> 
-                <span class="dot" onclick="currentSlide(3)"></span> 
-            </div>
+  <div class="container">
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <img
+          src="./images/icecream-mobile/customer1.png"
+          srcset="
+            ./images/icecream-mobile/customer1.png    1x,
+            ./images/icecream-mobile/customer1@2x.png 2x
+          "
+          alt="woman with curly hair"
+          width="85"
+          height="85"
+        />
+      </div>
+
+      <div class="mySlides fade">
+        <img
+          src="./images/icecream-mobile/customer2.png"
+          srcset="
+            ./images/icecream-mobile/customer2.png    1x,
+            ./images/icecream-mobile/customer2@2x.png 2x
+          "
+          alt="woman in glassess"
+          width="85"
+          height="85"
+        />
+      </div>
+
+      <div class="mySlides fade">
+        <img
+          src="./images/icecream-mobile/customer3.png"
+          srcset="
+            ./images/icecream-mobile/customer3.png    1x,
+            ./images/icecream-mobile/customer3@2x.png 2x
+          "
+          alt="woman in yellow blouse"
+          width="85"
+          height="85"
+        />
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
     </div>
+    <div></div>
+    <figure class="opinion__card">
+      <p class="opinion">
+        Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit
+        nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel risus.
+      </p>
+    </figure>
+    <ul class="ellipse">
+      <li class="ellipse__item">
+        <svg class="ellipse__item--icon" width="32" height="4">
+          <use href="images/icons.svg#icon-dotted"></use>
+        </svg>
+      </li>
+    </ul>
+    <p class="author">Emily, Los Angeles</p>
+    <div class="dots">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+  </div>
 </section>
 
 <script>
-    let slideIndex = 1;
-    showSlides(slideIndex);
-    
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides((slideIndex += n));
+  }
+
+  function currentSlide(n) {
+    showSlides((slideIndex = n));
+  }
+
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName('mySlides');
+    let dots = document.getElementsByClassName('dot');
+    if (n > slides.length) {
+      slideIndex = 1;
     }
-    
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
+    if (n < 1) {
+      slideIndex = slides.length;
     }
-    
-    function showSlides(n) {
-      let i;
-      let slides = document.getElementsByClassName("mySlides");
-      let dots = document.getElementsByClassName("dot");
-      if (n > slides.length) {slideIndex = 1}    
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";  
-      dots[slideIndex-1].className += " active";
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = 'none';
     }
-    </script> 
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(' active', '');
+    }
+    slides[slideIndex - 1].style.display = 'block';
+    dots[slideIndex - 1].className += ' active';
+  }
+</script>
