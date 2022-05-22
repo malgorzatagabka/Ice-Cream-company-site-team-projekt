@@ -12,6 +12,7 @@
   --font-subtext-secondary: #907E82;
   --header-background-color: #FFB8CA;
   --background-color: #FFF5F6;
+  --background-color-secondary: #FFFFFF;
   --header-background-menu: #E17992;
   --product2-color: #F0D1A5;
   --product3-color: #C2E297;
@@ -90,9 +91,9 @@ img {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .container {
-    max-width: 1200px;
+    max-width: 1280px;
     padding-left: 112px;
     padding-right: 112px;
   }
@@ -100,6 +101,13 @@ img {
 
 .hero {
   background-color: var(--header-background-color);
+}
+
+.icon-menu {
+  width: 20px;
+  height: 12px;
+  background-image: url("../images/icons.svg#icon-menu");
+  fill: black;
 }
 
 .about {
@@ -1585,6 +1593,35 @@ img {
   .is-hidden {
     opacity: 0;
     pointer-events: none;
+  }
+}
+
+.gallery__picture {
+  padding-bottom: 80px;
+}
+
+.gallery__background {
+  background-color: var(--background-color);
+  height: 62px;
+}
+
+@media screen and (min-width: 768px) {
+  .gallery__picture {
+    padding-bottom: 121px;
+  }
+  .gallery__background {
+    background-color: var(--background-color);
+    height: 119px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .gallery__picture {
+    padding-bottom: 123px;
+  }
+  .gallery__background {
+    background-color: var(--background-color);
+    height: 185px;
   }
 }
 

@@ -1,0 +1,39 @@
+.gallery{
+    &__picture{
+        padding-bottom: 80px;
+    }
+    &__background{
+        background-color: var(--background-color);
+        height: 62px;  
+    }
+}
+
+@media screen and (max-width: 767px){
+
+}
+
+@media screen and (min-width: 768px) {
+.gallery{
+    &__picture{
+        padding-bottom: 121px;
+    }
+    &__background {
+            background-color: var(--background-color);
+            height: 119px;
+        }
+}
+
+}
+
+@media screen and (min-width: 1280px) {
+.gallery{
+    &__picture{
+        padding-bottom: 123px;
+    }
+    &__background {
+            background-color: var(--background-color);
+            height: 185px
+        }
+}
+
+}
