@@ -9,17 +9,17 @@
     display: block;
     width: 33px;
     height: 50px;
-    background-image: url("../images/IceCream-mobile/icon1.png");
+    background-image: url("../images/icecream-mobile/icon1.png");
 }
 
 .advantages__item:nth-child(2)::before {
     width: 50px;
-    background-image: url("../images/IceCream-mobile/icon2.png");
+    background-image: url("../images/icecream-mobile/icon2.png");
 }
 
 .advantages__item:last-child::before {
     width: 44px;
-    background-image: url("../images/IceCream-mobile/icon3.png");
+    background-image: url("../images/icecream-mobile/icon3.png");
 }
 
 .advantages__number {
