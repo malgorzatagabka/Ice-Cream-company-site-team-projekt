@@ -93,7 +93,6 @@
     }
   }
   .products__all {
-    
     justify-content: center;
     display: flex;
     flex-direction: column;
@@ -264,7 +263,7 @@
   }
 
   .item-description::before {
-   content: '...';
+    content: '...';
     font-size: 26px;
     display: block;
     padding-bottom: 30px;
@@ -398,7 +397,6 @@
     margin: 0 auto;
     line-height: 1.145;
     letter-spacing: 0.04em;
-    
   }
 
   .translateY {

@@ -5,24 +5,26 @@
  */
 :root {
   /*COLORS* *COLORS* *COLORS* *COLORS* *COLORS* *COLORS* *COLORS* *COLORS* *COLORS* *COLORS* *COLORS* *COLORS* *COLORS*/
-  --font-color-main: #FFFFFF;
-  --font-color-secondary: #D41443;
-  --font-header: #FFA5BA;
+  --font-color-main: #ffffff;
+  --font-color-secondary: #d41443;
+  --font-header: #ffa5ba;
   --font-subtext-main: #000000;
-  --font-subtext-secondary: #907E82;
-  --header-background-color: #FFB8CA;
-  --background-color: #FFF5F6;
-  --background-color-secondary: #FFFFFF;
-  --header-background-menu: #E17992;
-  --product2-color: #F0D1A5;
-  --product3-color: #C2E297;
-  --customer-quote-color: #E1E1E1;
-  --customer-background-color: #FAFAFA;
-  --customer-dot-color: #D9D9D9;
-  --btn-color: #D41342;
-  --btn-color-secondary: #FFFFFF;
-  --btn-media: #FFA5BA;
-  --btn-media-hover: #D41443;
+  --font-subtext-secondary: #907e82;
+  --header-background-color: #ffb8ca;
+  --background-color: #fff5f6;
+  --background-color-secondary: #ffffff;
+  --header-background-menu: #e17992;
+  --product2-color: #f0d1a5;
+  --product3-color: #c2e297;
+  --customer-quote-color: #e1e1e1;
+  --customer-background-color: #fafafa;
+  --customer-dot-color: #d9d9d9;
+  --btn-color: #d41342;
+  --btn-color-secondary: #ffffff;
+  --btn-media: #ffa5ba;
+  --btn-media-hover: #d41443;
+  --menu-pseudo-color: #e18298;
+  --btn-hover: #ecebeb;
   /* FONTS * * FONTS * * FONTS * * FONTS * * FONTS * * FONTS *  * FONTS * * FONTS * * FONTS * * FONTS * * FONTS * * FONTS */
   --header-font: 'Titan One';
   --body-font: 'DM Sans';
@@ -201,7 +203,7 @@ img {
   pointer-events: none;
 }
 
-.backdrop {
+.backdrop-menu {
   position: fixed;
   left: 0;
   top: 0;
@@ -211,6 +213,7 @@ img {
   opacity: 1;
   -webkit-transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
 }
 
 .modal-menu {
@@ -242,6 +245,11 @@ img {
   margin-top: 60px;
   border: none;
   border-radius: 22px;
+  background-color: var(--background-color-secondary);
+}
+
+.modal-menu__buy:hover, .modal-menu__buy:focus {
+  background-color: var(--btn-hover);
 }
 
 .buy-icon {
@@ -255,25 +263,17 @@ img {
   color: var(--font-color-main);
   margin-top: 19px;
   margin-left: 21px;
-  position: relative;
 }
 
-.menu-list__item {
-  height: 42px;
-  padding: 12px 0;
+.menu-list__link {
+  text-decoration: none;
+  font-family: var(--body-font);
+  font-size: 14px;
+  line-height: 1.3;
+  color: var(--font-color-main);
 }
 
-.menu-list__item:after {
-  position: absolute;
-  content: '';
-  width: 250px;
-  background-color: black;
-  height: 5px;
-  left: -21px;
-}
-
-.menu-list__item:hover,
-.menu-list__item :focus {
+.menu-list__link:hover, .menu-list__link:focus {
   color: var(--font-color-secondary);
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
@@ -281,11 +281,30 @@ img {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icon-menu {
-  width: 20px;
-  height: 12px;
-  background-image: url("../images/icons.svg#icon-menu");
-  fill: black;
+.menu-list__item {
+  height: 42px;
+  padding: 12px 0;
+  position: relative;
+}
+
+.menu-list__item:after {
+  position: absolute;
+  content: '';
+  width: 250px;
+  background-color: var(--menu-pseudo-color);
+  height: 1px;
+  left: -21px;
+  top: 0;
+}
+
+.last-item::before {
+  position: absolute;
+  content: '';
+  width: 250px;
+  background-color: var(--menu-pseudo-color);
+  height: 1px;
+  left: -21px;
+  bottom: 0px;
 }
 
 .about {
@@ -558,13 +577,17 @@ img {
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
+  .customer-section {
+    padding-top: 154px;
+  }
   .opinion {
     font-family: var(--body-font);
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
-    line-height: 30.24px;
+    line-height: 2.52;
     text-align: center;
+    z-index: 2;
     color: var(--font-subtext-main);
     --end-color: transparent;
     background-image: repeating-linear-gradient(to top, var(--customer-quote-color), var(--customer-quote-color) 1px, var(--end-color) 1px, var(--end-color) 30.24px);
@@ -573,18 +596,12 @@ img {
     width: 100%;
     height: auto;
     background-color: var(--customer-background-color);
+    background-image: url("../images/icecream-mobile/quote.png");
+    background-repeat: no-repeat;
+    background-position: top 28px left 61px;
     padding: 43px 66px 26px 57px;
     display: block;
     margin: 0;
-  }
-  .opinion::before {
-    content: '';
-    width: 54px;
-    height: 40px;
-    display: inline-block;
-  }
-  .opinion::before {
-    background-color: blue;
   }
   .ellipse {
     list-style: none;
@@ -600,7 +617,7 @@ img {
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    line-height: 186%;
+    line-height: 1.86;
     text-align: center;
     color: var(--font-subtext-main);
   }
@@ -660,18 +677,20 @@ img {
     background-color: #d9d9d9;
     border-radius: 50%;
     display: inline-block;
-    -webkit-transition: background-color 0.6s ease;
-    transition: background-color 0.6s ease;
+    -webkit-transition: background-color 250ms ease;
+    transition: background-color 250ms ease;
     margin-bottom: 172px;
   }
   .dot:not(:last-child) {
     margin-right: 18px;
   }
   .active {
-    background-color: var(--btn-color);
-  }
-  .dot:hover {
-    background-color: var(--btn-color);
+    background-color: transparent;
+    background-image: url("../images/icecream-mobile/home.svg");
+    background-size: contain;
+    width: 12.4px;
+    height: 12px;
+    border-radius: 0%;
   }
   /* Fading animation */
   .fade {
@@ -699,12 +718,15 @@ img {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
+  .customer-section {
+    padding-top: 278px;
+  }
   .opinion {
     font-family: var(--body-font);
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    line-height: 216%;
+    line-height: 2.16;
     text-align: center;
     letter-spacing: 0.04em;
     color: var(--font-subtext-main);
@@ -713,11 +735,15 @@ img {
     margin: 0;
   }
   .opinion__card {
-    width: 100%;
+    width: 620px;
     height: 164px;
     background-color: var(--customer-background-color);
-    padding: 47px 80px 34px 60px;
-    margin: 0;
+    background-image: url("../images/icecream-mobile/quote.png");
+    background-repeat: no-repeat;
+    background-position: top 30px left 40px;
+    padding: 47px 80px 53px 80px;
+    margin-left: 40px;
+    margin-right: 40px;
   }
   .ellipse {
     list-style: none;
@@ -740,7 +766,7 @@ img {
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    line-height: 186%;
+    line-height: 1.86;
     text-align: center;
     color: var(--font-subtext-main);
     margin-bottom: 35px;
@@ -800,18 +826,20 @@ img {
     background-color: #d9d9d9;
     border-radius: 50%;
     display: inline-block;
-    -webkit-transition: background-color 0.6s ease;
-    transition: background-color 0.6s ease;
+    -webkit-transition: background-color 250ms ease;
+    transition: background-color 250ms ease;
     margin-bottom: 172px;
   }
   .dot:not(:last-child) {
     margin-right: 18px;
   }
   .active {
-    background-color: var(--btn-color);
-  }
-  .dot:hover {
-    background-color: var(--btn-color);
+    background-color: transparent;
+    background-image: url("../images/icecream-mobile/home.svg");
+    background-size: contain;
+    width: 12.4px;
+    height: 12px;
+    border-radius: 0%;
   }
   /* Fading animation */
   .fade {
@@ -839,24 +867,31 @@ img {
 }
 
 @media screen and (min-width: 1200px) {
-  .opinion__card {
-    width: 100%;
-    height: 138px;
-    background-color: var(--customer-background-color);
-    padding: 47px 80px 34px 60px;
-    margin: 0;
+  .customer-section {
+    padding-top: 281px;
   }
   .opinion {
     font-family: var(--body-font);
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    line-height: 216%;
+    line-height: 2.16;
     text-align: center;
     letter-spacing: 0.04em;
     color: var(--font-subtext-main);
     --end-color: transparent;
     background-image: repeating-linear-gradient(to top, var(--customer-quote-color), var(--customer-quote-color) 1px, var(--end-color) 1px, var(--end-color) 30.24px);
+  }
+  .opinion__card {
+    width: 926px;
+    height: 138px;
+    background-color: var(--customer-background-color);
+    background-image: url("../images/icecream-mobile/quote.png");
+    background-repeat: no-repeat;
+    background-position: top 32px left 50px;
+    padding: 47px 80px 34px 60px;
+    margin-left: 66px;
+    margin-right: 66px;
   }
   .ellipse {
     list-style: none;
@@ -878,7 +913,7 @@ img {
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    line-height: 186%;
+    line-height: 1.86;
     text-align: center;
     color: var(--font-subtext-main);
     margin-bottom: 35px;
@@ -938,18 +973,20 @@ img {
     background-color: #d9d9d9;
     border-radius: 50%;
     display: inline-block;
-    -webkit-transition: background-color 0.6s ease;
-    transition: background-color 0.6s ease;
+    -webkit-transition: background-color 250ms ease;
+    transition: background-color 250ms ease;
     margin-bottom: 234px;
   }
   .dot:not(:last-child) {
     margin-right: 18px;
   }
   .active {
-    background-color: var(--btn-color);
-  }
-  .dot:hover {
-    background-color: var(--btn-color);
+    background-color: transparent;
+    background-image: url("../images/icecream-mobile/home.svg");
+    background-size: contain;
+    width: 12.4px;
+    height: 12px;
+    border-radius: 0%;
   }
   /* Fading animation */
   .fade {
@@ -1025,7 +1062,7 @@ img {
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
-    line-height: 186%;
+    line-height: 1.86;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1050,7 +1087,7 @@ img {
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
-    line-height: 186%;
+    line-height: 1.86;
     letter-spacing: 0.04em;
     color: var(--font-subtext-main);
     padding-top: 25px;
@@ -1061,7 +1098,7 @@ img {
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
-    line-height: 18px;
+    line-height: 1.5;
     color: var(--font-subtext-secondary);
     padding-bottom: 25px;
     -ms-flex-wrap: wrap;
@@ -1074,7 +1111,7 @@ img {
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
-    line-height: 186%;
+    line-height: 1.86;
     color: var(--font-subtext-main);
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1089,7 +1126,7 @@ img {
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
-    line-height: 186%;
+    line-height: 1.86;
     color: var(--font-header);
   }
   .card__list-weekend-hours {
@@ -1102,7 +1139,7 @@ img {
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
-    line-height: 18px;
+    line-height: 1.5;
     color: var(--font-subtext-secondary);
     text-decoration: none;
   }
@@ -1121,7 +1158,7 @@ img {
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
-    line-height: 21px;
+    line-height: 1.312;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1148,7 +1185,7 @@ img {
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
-    line-height: 21px;
+    line-height: 1.312;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1217,7 +1254,7 @@ img {
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
-    line-height: 186%;
+    line-height: 1.86;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1242,7 +1279,7 @@ img {
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
-    line-height: 186%;
+    line-height: 1.86;
     letter-spacing: 0.04em;
     color: var(--font-subtext-main);
     padding-top: 25px;
@@ -1253,7 +1290,7 @@ img {
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    line-height: 18px;
+    line-height: 1.285;
     color: var(--font-subtext-secondary);
     padding-bottom: 25px;
     -ms-flex-wrap: wrap;
@@ -1266,7 +1303,7 @@ img {
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
-    line-height: 186%;
+    line-height: 1.86;
     color: var(--font-subtext-main);
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1281,7 +1318,7 @@ img {
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
-    line-height: 186%;
+    line-height: 1.86;
     color: var(--font-header);
   }
   .card__list-weekend-hours {
@@ -1294,7 +1331,7 @@ img {
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
-    line-height: 18px;
+    line-height: 1.5;
     color: var(--font-subtext-secondary);
     text-decoration: none;
   }
@@ -1318,7 +1355,7 @@ img {
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
-    line-height: 21px;
+    line-height: 1.312;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1344,7 +1381,7 @@ img {
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
-    line-height: 21px;
+    line-height: 1.312;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1410,7 +1447,7 @@ img {
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
-    line-height: 186%;
+    line-height: 1.86;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1435,7 +1472,7 @@ img {
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
-    line-height: 186%;
+    line-height: 1.86;
     letter-spacing: 0.04em;
     color: var(--font-subtext-main);
     padding-top: 25px;
@@ -1446,7 +1483,7 @@ img {
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    line-height: 18px;
+    line-height: 1.285;
     color: var(--font-subtext-secondary);
     padding-bottom: 25px;
     -ms-flex-wrap: wrap;
@@ -1459,7 +1496,7 @@ img {
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
-    line-height: 186%;
+    line-height: 1.86;
     color: var(--font-subtext-main);
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1474,7 +1511,7 @@ img {
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
-    line-height: 186%;
+    line-height: 1.86;
     color: var(--font-header);
   }
   .card__list-weekend-hours {
@@ -1487,7 +1524,7 @@ img {
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
-    line-height: 18px;
+    line-height: 1.5;
     color: var(--font-subtext-secondary);
     text-decoration: none;
   }
@@ -1511,7 +1548,7 @@ img {
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
-    line-height: 21px;
+    line-height: 1.312;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1537,7 +1574,7 @@ img {
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
-    line-height: 21px;
+    line-height: 1.312;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
