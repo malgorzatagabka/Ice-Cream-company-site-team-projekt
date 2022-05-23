@@ -132,10 +132,11 @@
     margin-top: 60px;
     border: none;
     border-radius: 22px;
+    background-color: var(--background-color-secondary);
 
     &:hover,
     &:focus {
-      background-color: var(--btn-header-hover);
+      background-color: var(--btn-hover);
     }
   }
 }
@@ -152,6 +153,21 @@
   margin-top: 19px;
   margin-left: 21px;
 
+  &__link {
+    text-decoration: none;
+    font-family: var(--body-font);
+    font-size: 14px;
+    line-height: 1.3;
+    color: var(--font-color-main);
+
+    &:hover,
+    &:focus {
+      color: var(--font-color-secondary);
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+
   &__item {
     height: 42px;
     padding: 12px 0;
@@ -165,13 +181,6 @@
       height: 1px;
       left: -21px;
       top: 0;
-    }
-
-    &:hover,
-    &:focus {
-      color: var(--font-color-secondary);
-      transition-duration: 250ms;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
   }
 }
