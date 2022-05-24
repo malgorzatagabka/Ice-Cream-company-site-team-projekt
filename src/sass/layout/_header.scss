@@ -205,6 +205,10 @@
   bottom: 0px;
 }
 
+.header-buy {
+  display: none;
+}
+
 @media screen and (min-width: 768px) {
   .hero {
     min-width: 768px;
@@ -213,6 +217,13 @@
       url('../images/icecream-tab/elipse-tab.png');
     background-repeat: no-repeat;
     background-position: right 247px bottom 0, right 137px bottom 46px;
+
+    &__header {
+    }
+  }
+
+  .header-buy {
+    display: flex;
   }
 }
 
