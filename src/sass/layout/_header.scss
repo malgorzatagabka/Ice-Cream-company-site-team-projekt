@@ -45,6 +45,11 @@
     color: var(--font-color-main);
     width: 62.4px;
     height: 24px;
+
+    &:focus,
+    &:hover {
+      background-color: var(--btn-hover-second);
+    }
   }
 
   &__how {
@@ -53,6 +58,11 @@
     width: 82.8px;
     height: 24px;
     margin-left: 8px;
+
+    &:focus,
+    &:hover {
+      background-color: var(--btn-hover);
+    }
   }
 }
 
@@ -195,6 +205,24 @@
   bottom: 0px;
 }
 
-@media screen and (min-width: 768px){
-  
+@media screen and (min-width: 768px) {
+  .hero {
+    min-width: 768px;
+    background-color: var(--header-background-color);
+    background-image: url('../images/icecream-tab/header-ice-tab.png'),
+      url('../images/icecream-tab/elipse-tab.png');
+    background-repeat: no-repeat;
+    background-position: right 247px bottom 0, right 137px bottom 46px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero {
+    min-width: 1280px;
+    background-color: var(--header-background-color);
+    background-image: url('../images/icecream-tab/header-ice-tab.png'),
+      url('../images/icecream-tab/elipse-tab.png');
+    background-repeat: no-repeat;
+    background-position: right 247px bottom 0, right 137px bottom 46px;
+  }
 }
