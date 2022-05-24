@@ -25,6 +25,7 @@
   --btn-media-hover: #d41443;
   --menu-pseudo-color: #e18298;
   --btn-hover: #ecebeb;
+  --btn-hover-second: #C7133E;
   /* FONTS * * FONTS * * FONTS * * FONTS * * FONTS * * FONTS *  * FONTS * * FONTS * * FONTS * * FONTS * * FONTS * * FONTS */
   --header-font: 'Titan One';
   --body-font: 'DM Sans';
@@ -79,15 +80,8 @@ img {
   margin-left: auto;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) and (max-width: 1279px) {
   .container {
-    max-width: 480px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 768px;
     padding-left: 34px;
     padding-right: 34px;
   }
@@ -95,7 +89,7 @@ img {
 
 @media screen and (min-width: 1280px) {
   .container {
-    max-width: 1280px;
+    width: 100%;
     padding-left: 112px;
     padding-right: 112px;
   }
@@ -160,12 +154,20 @@ img {
   height: 24px;
 }
 
+.hero-btn__products:focus, .hero-btn__products:hover {
+  background-color: var(--btn-hover-second);
+}
+
 .hero-btn__how {
   background-color: var(--btn-color-secondary);
   color: var(--font-color-secondary);
   width: 82.8px;
   height: 24px;
   margin-left: 8px;
+}
+
+.hero-btn__how:focus, .hero-btn__how:hover {
+  background-color: var(--btn-hover);
 }
 
 .icon-menu {
@@ -305,6 +307,35 @@ img {
   height: 1px;
   left: -21px;
   bottom: 0px;
+}
+
+.header-buy {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    min-width: 768px;
+    background-color: var(--header-background-color);
+    background-image: url("../images/icecream-tab/header-ice-tab.png"), url("../images/icecream-tab/elipse-tab.png");
+    background-repeat: no-repeat;
+    background-position: right 247px bottom 0, right 137px bottom 46px;
+  }
+  .header-buy {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero {
+    min-width: 1280px;
+    background-color: var(--header-background-color);
+    background-image: url("../images/icecream-tab/header-ice-tab.png"), url("../images/icecream-tab/elipse-tab.png");
+    background-repeat: no-repeat;
+    background-position: right 247px bottom 0, right 137px bottom 46px;
+  }
 }
 
 .about {
