@@ -27,12 +27,11 @@
 
 @media screen and (min-width: 1280px) {
 .gallery{
-    &__picture{
-        padding-bottom: 123px;
-    }
+    padding-bottom: 123px;
+    
     &__background {
             background-color: var(--background-color);
-            height: 185px
+            height: 185px;
         }
 }
 
