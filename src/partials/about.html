@@ -1,4 +1,4 @@
-<section class="about">
+<section class="about" id="how-its-made">
     <div class="container">
         <div class="about__title">
             <p class="about__label">tradition and love</p>
@@ -48,19 +48,6 @@
     </div>
 </section>
 
-<script>
-    (() => {
-            const refs = {
-                openAboutBtn: document.querySelector('[about-open]'),
-                closeAboutBtn: document.querySelector('[about-close]'),
-                modal: document.querySelector('[about-modal]'),
-            };
 
-            refs.openAboutBtn.addEventListener('click', toggleModal);
-            refs.closeAboutBtn.addEventListener('click', toggleModal);
+<script src="./js/about-modal.js"></script>
 
-            function toggleModal() {
-                refs.modal.classList.toggle('is-hidden');
-            }
-        })();
-</script>
