@@ -20,25 +20,25 @@
       var(--end-color) 1px,
       var(--end-color) 30.24px
     );
+    z-index:2;
+    position:relative;
+    bottom:25px;
     &__card {
       width: 100%;
       height: auto;
       background-color: var(--customer-background-color);
-      background-image: url("../images/icecream-mobile/quote.png");
-      background-repeat: no-repeat;
-      background-position: top 28px left 61px;
       padding: 43px 66px 26px 57px;
       display: block;
       margin:0;
+      &::before{
+        content: "";
+        display: block;
+        width: 54px;
+        height: 40px;
+        background-image: url("../images/icecream-mobile/quote.png");
+        z-index:1;
+      }
     }
-  }
-
-  .ellipse {
-    list-style: none;
-    justify-content: center;
-    text-align: center;
-    margin-top:30px;
-    margin-bottom:18px;
   }
 
   .author {
@@ -49,6 +49,18 @@
     line-height: 1.86;
     text-align: center;
     color: var(--font-subtext-main);
+    margin-top:52px;
+    &::before {
+      content: "";
+      display: block;
+      width: 32px;
+      height: 4px;
+      background-image: url("../images/icecream-mobile/ellipse.svg");
+      position: relative;
+      bottom:18px;
+      margin-left:auto;
+      margin-right:auto;
+    }
   }
 
   .mySlides {
@@ -66,35 +78,6 @@
     max-width: 100%;
     position: relative;
     margin-bottom:29px;
-  }
-
-  /* Next & previous buttons */
-  .prev,
-  .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: var(--font-color-main);
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
-
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover,
-  .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
   }
 
   /* The dots/bullets/indicators */
@@ -146,6 +129,8 @@
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .customer-section{
     padding-top: 278px;
+    padding-left:74px;
+    padding-right:74px;
   }
   
   .opinion {
@@ -165,31 +150,25 @@
       var(--end-color) 1px,
       var(--end-color) 30.24px
     );
+    z-index:2;
+    position:relative;
+    bottom:20px;
     margin: 0;
+    padding-left:40px;
     &__card {
-      width: 620px;
-      height: 164px;
+      width: 100%;
+      height: auto;
       background-color: var(--customer-background-color);
-      background-image: url("../images/icecream-mobile/quote.png");
-      background-repeat: no-repeat;
-      background-position: top 30px left 40px;
-      padding: 47px 80px 53px 80px;
-      margin-left:40px;
-      margin-right:40px;
-    }
-  }
-
-  .ellipse {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin-top: 0;
-    margin-top:24px;
-    margin-bottom: 14px;
-    &__item {
-      &:not(:last-child) {
-        margin-right: 10px;
+      padding: 30px 80px 34px 40px;
+      margin-left:auto;
+      margin-right:auto;
+      z-index: 1;
+      &::before{
+        content:"";
+        display: block;
+        background-image: url("../images/icecream-mobile/quote.png");
+        width: 54px;
+        height: 40px;
       }
     }
   }
@@ -203,6 +182,18 @@
     text-align: center;
     color: var(--font-subtext-main);
     margin-bottom: 35px;
+    margin-top:70px;
+    &::before {
+      content: "";
+      display: block;
+      width: 32px;
+      height: 4px;
+      background-image: url("../images/icecream-mobile/ellipse.svg");
+      position: relative;
+      bottom:14px;
+      margin-left:auto;
+      margin-right:auto;
+    }
   }
 
   .mySlides {
@@ -220,35 +211,6 @@
     max-width: 100%;
     position: relative;
     margin-bottom:19px;
-  }
-
-  /* Next & previous buttons */
-  .prev,
-  .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: var(--font-color-main);
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
-
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover,
-  .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
   }
 
   /* The dots/bullets/indicators */
@@ -296,9 +258,11 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px){
   .customer-section{
     padding-top: 281px;
+    padding-left:177px;
+    padding-right:177px;
   }
 
   .opinion {
@@ -318,29 +282,24 @@
       var(--end-color) 1px,
       var(--end-color) 30.24px
     );
+    z-index:2;
+    position:relative;
+    bottom:22px;
+    margin: 0;
+    padding-left:37px;
     &__card {
-      width: 926px;
+      width: 100%;
       height: 138px;
       background-color: var(--customer-background-color);
-      background-image: url("../images/icecream-mobile/quote.png");
-      background-repeat: no-repeat;
-      background-position: top 32px left 50px;
-      padding: 47px 80px 34px 60px;
-      margin-left:66px;
-      margin-right:66px;
-    }
-  }
-
-  .ellipse {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    &__item {
-      &:not(:last-child) {
-        margin-right: 10px;
+      padding: 32px 80px 34px 50px;
+      margin-left:auto;
+      margin-right:auto;
+      &::before{
+        content:"";
+        display: block;
+        background-image: url("../images/icecream-mobile/quote.png");
+        width: 54px;
+        height: 40px;
       }
     }
   }
@@ -354,6 +313,18 @@
     text-align: center;
     color: var(--font-subtext-main);
     margin-bottom: 35px;
+    margin-top:34px;
+      &::before {
+        content: "";
+        display: block;
+        width: 32px;
+        height: 4px;
+        background-image: url("../images/icecream-mobile/ellipse.svg");
+        position: relative;
+        bottom:15px;
+        margin-left:auto;
+        margin-right:auto;
+      }
   }
 
   .mySlides {
@@ -371,35 +342,6 @@
     max-width: 100%;
     position: relative;
     margin-bottom:15px;
-  }
-
-  /* Next & previous buttons */
-  .prev,
-  .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: var(--font-color-main);
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
-
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover,
-  .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
   }
 
   /* The dots/bullets/indicators */
