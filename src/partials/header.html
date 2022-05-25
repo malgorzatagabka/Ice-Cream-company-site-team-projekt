@@ -13,6 +13,13 @@
       <svg class="icon-menu" width="20" height="12" data-menu-open>
         <use href="./images/icons.svg#icon-menu"></use>
       </svg>
+
+      <button type="button" class="header-buy-btn">
+        Buy now
+        <svg class="buy-icon" width="5.26" height="8">
+          <use href="./images/arrow.svg#icon-arrow_menu"></use>
+        </svg>
+      </button>
     </div>
 
     <div class="hero__passion">
@@ -29,6 +36,93 @@
         <button type="submit" class="hero-btn hero-btn__products">Products</button>
 
         <button type="submit" class="hero-btn hero-btn__how">How it's made?</button>
+      </div>
+
+      <div class="hero__numbers">
+        <div class="top-number">
+          <p class="hero-number">16</p>
+
+          <p class="hero-text">cafes</p>
+        </div>
+
+        <div class="bottom-number">
+          <p class="hero-number">23</p>
+
+          <p class="hero-text">food trucks</p>
+        </div>
+      </div>
+
+      <div class="passion-bottom-items">
+        <picture>
+          <source
+            srcset="
+              ./images/icecream-tab/header-milk-tab.png    1x,
+              ./images/icecream-tab/header-milk-tab@2x.png 2x
+            "
+            media="(min-width: 768px)"
+          />
+
+          <img class="hero-milk" src="./images/icecream-tab/header-milk-tab.png" alt="milk" />
+        </picture>
+
+        <div class="lorem-arrow">
+          <div class="hero__lorem">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et
+          </div>
+
+          <picture>
+            <source
+              srcset="
+                ./images/icecream-mobile/arrow-right.png    1x,
+                ./images/icecream-mobile/arrow-right@2x.png 2x
+              "
+              media="(min-width: 768px)"
+            />
+
+            <img
+              class="hero-arrow"
+              src="./images/icecream-mobile/arrow-right.png"
+              alt="arrow right"
+            />
+          </picture>
+        </div>
+
+        <picture>
+          <source
+            srcset="
+              ./images/icecream-tab/elipse-tab.png    1x,
+              ./images/icecream-tab/elipse-tab@2x.png 2x
+            "
+            media="(min-width: 768px)"
+          />
+
+          <img class="hero-elipse" src="./images/icecream-tab/elipse-tab.png" alt="elipse" />
+        </picture>
+
+        <picture>
+          <source
+            srcset="
+              ./images/icecream-tab/header-ice-tab.png    1x,
+              ./images/icecream-tab/header-ice-tab@2x.png 2x
+            "
+            media="(min-width: 768px)"
+          />
+
+          <img class="hero-ice" src="./images/icecream-tab/header-ice-tab.png" alt="ice" />
+        </picture>
+
+        <picture>
+          <source
+            srcset="
+              ./images/icecream-tab/header-tasty-tab.png    1x,
+              ./images/icecream-tab/header-tasty-tab@2x.png 2x
+            "
+            media="(min-width: 768px)"
+          />
+
+          <img class="hero-tasty" src="./images/icecream-tab/header-tasty-tab.png" alt="tasty" />
+        </picture>
       </div>
     </div>
   </div>
@@ -53,7 +147,9 @@
       <li class="menu-list__item">
         <a class="menu-list__link" href="#home">Home</a>
       </li>
-      <li class="menu-list__item"><a class="menu-list__link" href="#about-us">About us</a></li>
+      <li class="menu-list__item">
+        <a class="menu-list__link" href="#about-us">About us</a>
+      </li>
       <li class="menu-list__item">
         <a class="menu-list__link" href="#how-its-made">How it's made?</a>
       </li>
