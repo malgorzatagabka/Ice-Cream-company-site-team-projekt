@@ -12,6 +12,16 @@
     padding-top: 6px;
   }
 
+  &__numbers {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 12px;
+    flex-direction: column;
+    width: 53px;
+    text-align: right;
+  }
+
   &__passion {
     position: relative;
   }
@@ -33,6 +43,74 @@
     line-height: 1.3025;
     padding-bottom: 160px;
   }
+
+  &__lorem {
+    max-width: 114px;
+    font-weight: 400;
+    color: var(--font-color-main);
+    font-size: 8px;
+    line-height: 1.5;
+    padding-bottom: 59px;
+  }
+}
+
+.hero-number {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.1428;
+  color: var(--font-color-secondary);
+  font-family: var(--header-font);
+  letter-spacing: 0.04em;
+  z-index: 2;
+}
+
+.top-number {
+  position: relative;
+  padding-bottom: 14px;
+  background-image: url('../images/icecream-tab/elipse-white-tab.png');
+  background-repeat: no-repeat;
+  background-position: right 0 bottom 41px;
+  padding-right: 10px;
+  padding-top: 2px;
+}
+
+.bottom-number {
+  position: relative;
+  padding-bottom: 14px;
+  background-image: url('../images/icecream-tab/elipse-white-tab.png');
+  background-repeat: no-repeat;
+  background-position: right 2px bottom 41px;
+  padding-right: 10px;
+  padding-top: 2px;
+}
+
+.hero-white-elipse {
+  position: absolute;
+  top: 2px;
+  right: -10px;
+}
+
+.hero-text {
+  font-weight: 400;
+  font-size: 8px;
+  font-family: var(--body-font);
+  line-height: 1.25;
+  color: var(--font-color-main);
+}
+
+.hero-arrow {
+  display: none;
+  width: 18px;
+  height: 18px;
+}
+
+.lorem-arrow {
+  display: none;
+}
+
+.hero-tasty {
+  display: none;
+  position: absolute;
 }
 
 .hero-btn {
@@ -209,21 +287,136 @@
   display: none;
 }
 
+.header-buy-btn {
+  font-family: var(--body-font);
+  color: var(--font-color-secondary);
+  font-weight: 700;
+  line-height: 1.3;
+  font-size: 16px;
+  width: 160px;
+  height: 44px;
+  border: none;
+  border-radius: 22px;
+  background-color: var(--background-color-secondary);
+
+  display: none;
+
+  &:hover,
+  &:focus {
+    background-color: var(--btn-hover);
+  }
+}
+
+.passion-bottom-items {
+  display: none;
+}
+
+.hero-milk {
+  position: absolute;
+  bottom: 50px;
+}
+
+.hero-elipse {
+  position: absolute;
+  bottom: 46px;
+  right: 103px;
+}
+
+.hero-ice {
+  position: absolute;
+  bottom: 0;
+  right: 213px;
+}
+
 @media screen and (min-width: 768px) {
   .hero {
     min-width: 768px;
+    max-height: 399px;
     background-color: var(--header-background-color);
-    background-image: url('../images/icecream-tab/header-ice-tab.png'),
-      url('../images/icecream-tab/elipse-tab.png');
-    background-repeat: no-repeat;
-    background-position: right 247px bottom 0, right 137px bottom 46px;
+    background-image: none;
+
+    &__numbers {
+      display: flex;
+    }
 
     &__header {
+      padding-top: 37px;
+      position: relative;
     }
+
+    &__buttons {
+      padding-top: 20px;
+      padding-bottom: 66px;
+    }
+
+    &__passion {
+      max-height: 312px;
+      position: relative;
+    }
+
+    &__lorem {
+      display: block;
+      padding-bottom: 7px;
+    }
+  }
+
+  .hero-milk {
+    position: relative;
+  }
+
+  .hero-tasty {
+    display: flex;
+    bottom: 0;
+    right: 0;
+  }
+
+  .hero-arrow {
+    display: block;
+  }
+
+  .hero-elipse {
+    display: block;
+  }
+
+  .icon-menu {
+    position: absolute;
+    right: 196px;
+    z-index: 1;
   }
 
   .header-buy {
     display: flex;
+  }
+
+  .header-buy-btn {
+    display: inline-block;
+    z-index: 1;
+  }
+
+  .title {
+    padding-top: 15px;
+
+    &__white {
+      font-size: 22px;
+    }
+
+    &__pink {
+      font-size: 34px;
+    }
+  }
+
+  .lorem-arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .passion-bottom-items {
+    display: flex;
+  }
+
+  .modal-menu__buy {
+    width: 186px;
   }
 }
 
