@@ -81,6 +81,7 @@
   display: inline-block;
   background: #E1E1E1;
   border-top: 1px solid;
+  border-top: 1px solid #E1E1E1;
   position: absolute;
   margin-top: -9px;
 }
@@ -142,6 +143,7 @@
     font-size: 30px;
     line-height: 1.133;
     width: 472px; 
+    width: 472px;
   }
 
   &__description-two {

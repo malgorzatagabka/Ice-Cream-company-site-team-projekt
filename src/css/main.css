@@ -2012,6 +2012,7 @@ img {
   display: inline-block;
   background: #E1E1E1;
   border-top: 1px solid;
+  border-top: 1px solid #E1E1E1;
   position: absolute;
   margin-top: -9px;
 }
