@@ -459,6 +459,12 @@
     &__passion {
       min-height: 583px;
     }
+
+    &__numbers {
+      top: 4px;
+      right: 18px;
+      padding: 78px;
+    }
   }
 
   .hero-elipse {
@@ -511,10 +517,12 @@
   }
 
   .hero-milk {
-    bottom: 56px;
+    margin-bottom: 45px;
+    margin-top: 56px;
   }
   .hero__lorem {
     font-size: 14px;
+    max-width: 200px;
   }
   .hero-number {
     font-size: 46px;
@@ -522,5 +530,22 @@
   .hero-text {
     font-size: 14px;
     line-height: 1.285;
+  }
+
+  .top-number {
+    position: relative;
+    padding-bottom: 14px;
+    background-image: url('../images/icecream-tab/elipse-white-tab.png');
+    background-repeat: no-repeat;
+    background-position: right -8px bottom 41px;
+    padding-right: 38px;
+    padding-top: 2px;
+  }
+
+  .bottom-number {
+    position: relative;
+    background-image: url('../images/icecream-tab/elipse-white-tab.png');
+    background-repeat: no-repeat;
+    background-position: right -18px bottom 41px;
   }
 }
