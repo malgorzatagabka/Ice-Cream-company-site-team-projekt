@@ -79,8 +79,6 @@
   width: 100%;
   left: 0;
   display: inline-block;
-  background: #E1E1E1;
-  border-top: 1px solid;
   border-top: 1px solid #E1E1E1;
   position: absolute;
   margin-top: -9px;
@@ -142,7 +140,6 @@
   &__description-first {
     font-size: 30px;
     line-height: 1.133;
-    width: 472px; 
     width: 472px;
   }
 
@@ -157,7 +154,6 @@
     line-height: 1.875;
   }
 
-.laws { 
 .laws {
   font-size: 14px;
   line-height: 1.857;
