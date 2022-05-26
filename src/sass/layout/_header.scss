@@ -4,6 +4,11 @@
     url('../images/icecream-mobile/elipse.png');
   background-repeat: no-repeat;
   background-position: right 32px bottom 0, right -62px bottom 75px;
+
+  &__menu-desktop {
+    display: none;
+  }
+
   &__header {
     display: flex;
     flex-direction: row;
@@ -328,6 +333,25 @@
   right: 213px;
 }
 
+.menu-header {
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+  font-weight: 700;
+  color: var(--font-color-main);
+  font-size: 16px;
+  line-height: 1.3125;
+
+  &__item:hover,
+  &__item:focus {
+    color: var(--font-color-secondary);
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 35px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .hero {
     min-width: 768px;
@@ -424,9 +448,79 @@
   .hero {
     min-width: 1280px;
     background-color: var(--header-background-color);
-    background-image: url('../images/icecream-tab/header-ice-tab.png'),
-      url('../images/icecream-tab/elipse-tab.png');
-    background-repeat: no-repeat;
-    background-position: right 247px bottom 0, right 137px bottom 46px;
+    background-image: none;
+    min-height: 665px;
+
+    &__menu-desktop {
+      display: block;
+      z-index: 1;
+    }
+
+    &__passion {
+      min-height: 583px;
+    }
+  }
+
+  .hero-elipse {
+    width: 538px;
+    height: 538px;
+    bottom: 75px;
+    right: 152px;
+  }
+
+  .logo {
+    margin-right: 110px;
+
+    &__item {
+      position: absolute;
+      left: -69px;
+      bottom: 0;
+    }
+  }
+
+  .icon-menu {
+    display: none;
+  }
+  .title {
+    padding-top: 84px;
+    &__white {
+      font-size: 38px;
+    }
+    &__pink {
+      font-size: 58px;
+    }
+  }
+  .hero__buttons {
+    padding-top: 25px;
+    padding-bottom: 56px;
+  }
+  .hero-btn {
+    font-size: 14px;
+  }
+  .hero-btn__products {
+    width: 104px;
+    height: 40px;
+  }
+  .hero-btn__how {
+    width: 138px;
+    height: 40px;
+  }
+
+  .hero-ice {
+    bottom: 0;
+  }
+
+  .hero-milk {
+    bottom: 56px;
+  }
+  .hero__lorem {
+    font-size: 14px;
+  }
+  .hero-number {
+    font-size: 46px;
+  }
+  .hero-text {
+    font-size: 14px;
+    line-height: 1.285;
   }
 }
