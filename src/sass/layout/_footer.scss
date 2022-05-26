@@ -1,0 +1,168 @@
+.background {
+  background-color: var(--background-color);
+}
+
+.footer {
+  &__description-first {
+    font-size: 18px;
+    line-height: 1.166;
+    font-family: var(--header-font);
+    color: var(--font-header);
+    width: 232px;
+  }
+
+   &__description-two {
+    font-size: 34px;
+    line-height: 1.147;
+    letter-spacing: 0.04em;
+    color: var(--font-color-secondary);
+    font-family: var(--header-font);
+    width: 200px;
+    padding-top: 17px;
+   }
+
+   &__list {
+     display: flex;
+     justify-content: flex-end;
+     padding-top: 43px;
+   }
+
+   &__list-item:not(:first-child) {
+     margin-left: 28px;
+   }
+
+   &__list-link {
+     display: block;
+     width: 32px;
+     height: 32px;
+   }
+
+   &__list-svg {
+     fill: #FEA5BB;
+   }
+
+   &__list-svg:focus,
+   &__list-svg:hover {
+     fill: var(--font-color-secondary);
+   }
+
+   &__adress-description {
+    font-family: var(--body-font);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.833;
+    text-align: right;
+    color: var(--font-subtext-main);
+    margin-top: 46px;
+    margin-bottom: 43px;
+   }
+
+  &__adress-link {
+    color: var(--font-color-secondary);
+  }
+}
+
+.laws {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: center;
+  width: 149px;
+  margin: 0 auto;
+  color: var(--font-subtext-secondary);
+  padding-bottom: 9px;
+  }
+
+.laws::before {
+  content: "";
+  width: 100%;
+  left: 0;
+  display: inline-block;
+  background: #E1E1E1;
+  border-top: 1px solid;
+  position: absolute;
+  margin-top: -9px;
+}
+
+@media screen and (min-width: 768px) {
+.footer-two {
+  display:flex;
+  justify-content: space-between;
+}
+
+.footer {
+
+  padding-bottom: 120px;
+
+  &__list {
+    padding-top: 0;
+  }
+
+  &__adress-description {
+    font-size: 14px;
+    line-height: 1.857;
+  }
+
+   &__description-first {
+    font-size: 26px;
+    line-height: 1.153;
+    letter-spacing: 0.04em;
+    width: 340px;
+   }
+
+   &__description-two {
+    font-size: 48px;
+    line-height: 1.145;
+    letter-spacing: 0.06em;
+    width: 340px
+   }
+
+}
+}
+
+.laws {
+  line-height: 1.857;
+  letter-spacing: 0.02em;
+  width: 276px;
+  padding-bottom: 18px;
+}
+
+.laws::before {
+  margin-top: -18px;
+}
+
+
+
+
+@media screen and (min-width: 1280px) {
+.footer {
+
+  &__description-first {
+    font-size: 30px;
+    line-height: 1.133;
+    width: 472px; 
+  }
+
+  &__description-two {
+    font-size: 58px;
+    line-height: 1.137;
+    width: 477px;
+  }
+
+  &__adress-description {
+    font-size: 16px;
+    line-height: 1.875;
+  }
+
+.laws { 
+  font-size: 14px;
+  line-height: 1.857;
+  padding-bottom: 22px;
+}
+
+.laws::before {
+  margin-top: -22px;
+}
+}
+}
