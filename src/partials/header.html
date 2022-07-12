@@ -35,19 +35,21 @@
     </div>
 
     <div class="hero__passion">
-      <div class="title">
-        <p class="title__white">
-          ice cream<br />
-          made with
-        </p>
+      <div class="title-wrapper">
+        <div class="title">
+          <p class="title__white">
+            ice cream<br />
+            made with
+          </p>
 
-        <p class="title__pink">passion</p>
-      </div>
+          <p class="title__pink">passion</p>
+        </div>
 
-      <div class="hero__buttons">
-        <button type="submit" class="hero-btn hero-btn__products">Products</button>
+        <div class="hero__buttons">
+          <button type="submit" class="hero-btn hero-btn__products">Products</button>
 
-        <button type="submit" class="hero-btn hero-btn__how">How it's made?</button>
+          <button type="submit" class="hero-btn hero-btn__how">How it's made?</button>
+        </div>
       </div>
 
       <div class="hero__numbers">
@@ -67,18 +69,15 @@
       <div class="passion-bottom-items">
         <picture>
           <source
-            srcset="
-              ./images/icecream-tab/header-milk-tab.png    1x,
-              ./images/icecream-tab/header-milk-tab@2x.png 2x
-            "
+            srcset="./images/icecream-tab/header-milk-tab@2x.png 2x"
             media="(min-width: 768px)"
           />
           <source
             srcset="
-              ./images/icecream-desktop/header-milk-desktop.png    1x,
+             ./images/icecream-desktop/header-milk-desktop.png 1,
               ./images/icecream-desktop/header-milk-desktop@2x.png 2x
             "
-            media="(min-width: 1280px)"
+            media="(min-width:1280px)"
           />
 
           <img class="hero-milk" src="./images/icecream-tab/header-milk-tab.png" alt="milk" />
@@ -88,26 +87,27 @@
           <div class="hero__lorem">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et
+            <picture>
+              <source
+                srcset="
+                  ./images/icecream-mobile/arrow-right.png    1x,
+                  ./images/icecream-mobile/arrow-right@2x.png 2x
+                "
+                media="(min-width: 768px)"
+              />
+
+              <img
+                class="hero-arrow"
+                src="./images/icecream-mobile/arrow-right.png"
+                alt="arrow right"
+              />
+            </picture>
           </div>
-
-          <picture>
-            <source
-              srcset="
-                ./images/icecream-mobile/arrow-right.png    1x,
-                ./images/icecream-mobile/arrow-right@2x.png 2x
-              "
-              media="(min-width: 768px)"
-            />
-
-            <img
-              class="hero-arrow"
-              src="./images/icecream-mobile/arrow-right.png"
-              alt="arrow right"
-            />
-          </picture>
         </div>
+      </div>
+      <div class="hero-elipse"></div>
 
-        <picture>
+      <!-- <picture>
           <source
             srcset="
               ./images/icecream-tab/elipse-tab.png    1x,
@@ -124,46 +124,40 @@
           />
 
           <img class="hero-elipse" src="./images/icecream-tab/elipse-tab.png" alt="elipse" />
-        </picture>
+        </picture> -->
 
-        <picture>
-          <source
-            srcset="
-              ./images/icecream-tab/header-ice-tab.png    1x,
-              ./images/icecream-tab/header-ice-tab@2x.png 2x
-            "
-            media="(min-width: 768px)"
-          />
-          <source
-            srcset="
-              ./images/icecream-desktop/header-ice-desktop.png    1x,
-              ./images/icecream-desktop/header-ice-desktop@2x.png 2x
-            "
-            media="(min-width: 1280px)"
-          />
+      <picture>
+        <source
+          srcset="./images/icecream-tab/header-ice-tab@2x.png 2x"
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="
+            ./images/icecream-desktop/header-ice-desktop.png    1x,
+            ./images/icecream-desktop/header-ice-desktop@2x.png 2x
+          "
+          media="(min-width: 1280px)"
+        />
+        <source srcset="./images/icecream-mobile/header-ice@2x.png 2x" media="(min-width: 320px)" />
 
-          <img class="hero-ice" src="./images/icecream-tab/header-ice-tab.png" alt="ice" />
-        </picture>
+        <img class="hero-ice" src="./images/icecream-mobile/header-ice.png" alt="ice" />
+      </picture>
 
-        <picture>
-          <source
-            srcset="
-              ./images/icecream-tab/header-tasty-tab.png    1x,
-              ./images/icecream-tab/header-tasty-tab@2x.png 2x
-            "
-            media="(min-width: 768px)"
-          />
-          <source
-            srcset="
-              ./images/icecream-desktop/header-tasty-desktop.png    1x,
-              ./images/icecream-desktop/header-tasty-desktop@2x.png 2x
-            "
-            media="(min-width: 1280px)"
-          />
+      <picture>
+        <source
+          srcset="./images/icecream-tab/header-tasty-tab@2x.png 2x"
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="
+            ./images/icecream-desktop/header-tasty-desktop.png    1x,
+            ./images/icecream-desktop/header-tasty-desktop@2x.png 2x
+          "
+          media="(min-width: 1280px)"
+        />
 
-          <img class="hero-tasty" src="./images/icecream-tab/header-tasty-tab.png" alt="tasty" />
-        </picture>
-      </div>
+        <img class="hero-tasty" src="./images/icecream-tab/header-tasty-tab.png" alt="tasty" />
+      </picture>
     </div>
   </div>
 </div>

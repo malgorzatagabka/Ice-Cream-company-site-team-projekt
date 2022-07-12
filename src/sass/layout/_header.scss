@@ -1,9 +1,10 @@
 .hero {
   background-color: var(--header-background-color);
-  background-image: url('../images/icecream-mobile/header-ice.png'),
-    url('../images/icecream-mobile/elipse.png');
-  background-repeat: no-repeat;
-  background-position: right 32px bottom 0, right -62px bottom 75px;
+  // background-image: url('../images/icecream-mobile/header-ice.png'),
+  //   url('../images/icecream-mobile/elipse.png');
+  // background-repeat: no-repeat;
+  // background-position: right 32px bottom 0, right -62px bottom 75px;
+overflow: hidden;
 
   &__menu-desktop {
     display: none;
@@ -58,6 +59,10 @@
     padding-bottom: 59px;
   }
 }
+.title-wrapper{
+    position: relative;
+    z-index: 3;
+}
 
 .hero-number {
   font-weight: 400;
@@ -67,27 +72,28 @@
   font-family: var(--header-font);
   letter-spacing: 0.04em;
   z-index: 2;
+  position: relative;
 }
 
-.top-number {
-  position: relative;
-  padding-bottom: 14px;
-  background-image: url('../images/icecream-tab/elipse-white-tab.png');
-  background-repeat: no-repeat;
-  background-position: right 0 bottom 41px;
-  padding-right: 10px;
-  padding-top: 2px;
-}
+// .top-number {
+//   position: relative;
+//   padding-bottom: 14px;
+//   background-image: url('../images/icecream-tab/elipse-white-tab.png');
+//   background-repeat: no-repeat;
+//   background-position: right 0 bottom 41px;
+//   padding-right: 10px;
+//   padding-top: 2px;
+// }
 
-.bottom-number {
-  position: relative;
-  padding-bottom: 14px;
-  background-image: url('../images/icecream-tab/elipse-white-tab.png');
-  background-repeat: no-repeat;
-  background-position: right 2px bottom 41px;
-  padding-right: 10px;
-  padding-top: 2px;
-}
+// .bottom-number {
+//   position: relative;
+//   padding-bottom: 14px;
+//   background-image: url('../images/icecream-tab/elipse-white-tab.png');
+//   background-repeat: no-repeat;
+//   background-position: right 2px bottom 41px;
+//   padding-right: 10px;
+//   padding-top: 2px;
+// }
 
 .hero-white-elipse {
   position: absolute;
@@ -122,6 +128,7 @@
   border-radius: 20px;
   font-size: 8px;
   border: none;
+  cursor: pointer;
 
   &__products {
     background-color: var(--btn-color);
@@ -132,6 +139,8 @@
     &:focus,
     &:hover {
       background-color: var(--btn-hover-second);
+      
+      
     }
   }
 
@@ -145,6 +154,7 @@
     &:focus,
     &:hover {
       background-color: var(--btn-hover);
+      
     }
   }
 }
@@ -324,13 +334,17 @@
 .hero-elipse {
   position: absolute;
   bottom: 46px;
-  right: 103px;
+  left: 36px;
+  width: 346px;
+  height: 344px;
+  border-radius: 50%;
+  background-color: #ffa5ba;
 }
 
 .hero-ice {
   position: absolute;
   bottom: 0;
-  right: 213px;
+  left: 117px;
 }
 
 .menu-header {
@@ -341,6 +355,8 @@
   color: var(--font-color-main);
   font-size: 16px;
   line-height: 1.3125;
+  cursor: pointer;
+  
 
   &__item:hover,
   &__item:focus {
@@ -353,6 +369,16 @@
 }
 
 @media screen and (min-width: 768px) {
+  .hero-ice {
+    left: 303px;
+  }
+  .hero-elipse {
+    bottom: 46px;
+    left: 255px;
+    width: 335px;
+    height: 333px;
+  }
+
   .hero {
     min-width: 768px;
     max-height: 399px;
@@ -378,28 +404,27 @@
       position: relative;
     }
 
-    &__lorem {
-      display: block;
-      padding-bottom: 7px;
-    }
+    // &__lorem {
+    //   display: block;
+    //   padding-bottom: 7px;
+    // }
   }
 
   .hero-milk {
     position: relative;
+    width: 124px;
   }
 
   .hero-tasty {
     display: flex;
     bottom: 0;
     right: 0;
+    width: 168px;
   }
 
   .hero-arrow {
     display: block;
-  }
-
-  .hero-elipse {
-    display: block;
+    margin: 7px 0 0 0;
   }
 
   .icon-menu {
@@ -436,12 +461,31 @@
   }
 
   .passion-bottom-items {
+    left: 32px;
+    bottom: 16px;
     display: flex;
+    align-items: center;
   }
 
   .modal-menu__buy {
     width: 186px;
   }
+}
+
+.top-number {
+  margin-bottom: 16px;
+}
+
+.hero-number::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  right: -7px;
+  z-index: -1;
+  width: 16px;
+  height: 16px;
+  background-color: var(--font-color-main);
+  border-radius: 50%;
 }
 
 @media screen and (min-width: 1280px) {
@@ -468,10 +512,19 @@
   }
 
   .hero-elipse {
+    bottom: 75px;
+    left: 350px;
     width: 538px;
     height: 538px;
-    bottom: 75px;
-    right: 152px;
+  }
+  .hero-ice {
+    left: 450px;
+    width: 236px;
+    height: 557px;
+  }
+
+  .hero-tasty {
+    width: 293px;
   }
 
   .logo {
@@ -499,53 +552,79 @@
   .hero__buttons {
     padding-top: 25px;
     padding-bottom: 56px;
+    cursor: pointer;
   }
   .hero-btn {
     font-size: 14px;
+    transition: width 300ms linear;
   }
   .hero-btn__products {
     width: 104px;
     height: 40px;
+
+    &:hover{
+      width:150px; 
+    }
+    
   }
   .hero-btn__how {
     width: 138px;
     height: 40px;
+
+    &:hover {
+        width: 188px;
+      }
   }
 
-  .hero-ice {
-    bottom: 0;
-  }
+  // .hero-ice {
+  //   bottom: 0;
+  // }
 
   .hero-milk {
+    width: 188px;
     margin-bottom: 45px;
     margin-top: 56px;
   }
+
+  .hero-arrow {
+    width: 26px;
+    height: 26px;
+  }
+
   .hero__lorem {
     font-size: 14px;
     max-width: 200px;
   }
+
   .hero-number {
     font-size: 46px;
+    &::before {
+      top: -10px;
+      right: -68px;
+      width: 30px;
+      height: 30px;
+    }
   }
+
   .hero-text {
     font-size: 14px;
     line-height: 1.285;
   }
 
-  .top-number {
-    position: relative;
-    padding-bottom: 14px;
-    background-image: url('../images/icecream-tab/elipse-white-tab.png');
-    background-repeat: no-repeat;
-    background-position: right -8px bottom 41px;
-    padding-right: 38px;
-    padding-top: 2px;
-  }
+  // .top-number {
+  //   position: relative;
+  //   padding-bottom: 14px;
+  //   background-image: url('../images/icecream-tab/elipse-white-tab.png');
+  //   background-repeat: no-repeat;
+  //   background-position: right -8px bottom 41px;
+  //   padding-right: 38px;
+  //   padding-top: 2px;
+  // }
 
-  .bottom-number {
-    position: relative;
-    background-image: url('../images/icecream-tab/elipse-white-tab.png');
-    background-repeat: no-repeat;
-    background-position: right -18px bottom 41px;
-  }
+  // .bottom-number {
+  //   position: relative;
+  //   background-image: url('../images/icecream-tab/elipse-white-tab.png');
+  //   background-repeat: no-repeat;
+  //   background-position: right -18px bottom 41px;
+  // }
 }

@@ -96,9 +96,11 @@
   align-items: center;
   text-align: center;
   color: var(--font-color-secondary);
+  cursor: pointer;
 
   &:hover {
     background: #ecebeb;
+  
   }
 }
 
@@ -196,5 +198,10 @@
 
   .about__btn {
     margin-top: 45px;
+    transition: width 300ms linear;
+
+    &:hover{
+      width:200px
+    }
   }
 }
