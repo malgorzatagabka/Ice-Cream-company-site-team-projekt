@@ -48,3 +48,4 @@ właściwości `homepage`, na przykład
 - Zdjęcia dodawajcie w folder `src/images`, przed tym zoptymizujcie te zdjęcia które dodajecie.
   Program po prostu kopiuje wykorzystane zdjęcia aby system nie musiał optymizować je, bo na słabych
   komputerach to moze zająć duzo czasu.
+   
