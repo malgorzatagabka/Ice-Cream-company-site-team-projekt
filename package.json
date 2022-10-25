@@ -3,10 +3,10 @@
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://malgorzatagabka.github.io/Ice-Cream-company-site-team-projekt/",
+  "homepage": "https://malgorzatagabka.github.io/ice-cream-company-site-team-projekt/",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /Ice-Cream-company-site-team-projekt/"
+    "build": "parcel build src/*.html --public-url /ice-cream-company-site-team-projekt/"
   },
   "repository": {
     "type": "git",
